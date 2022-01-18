@@ -4,65 +4,31 @@ README:https://github.com/VirgilClyne/GetSomeFries
 
 const $ = new Env('Netflix');
 
-if (typeof $.getdata("GetSomeFries") != "undefined") {
-	// BoxJs Function Supported
-	// load user prefs from BoxJs
-	$.Netflix = JSON.parse($.getdata("GetSomeFries")).Netflix
-	$.log('before, Netflix:' + JSON.stringify($.Netflix))
-	$.Netflix.config = Object.fromEntries($.Netflix.config.split("\n").map((item) => item.split("=")));
-	$.log('after, Netflix:' + JSON.stringify($.Netflix))
-	/*
-	$.Netflix.config.allowWidevinePlayback = JSON.parse($.Netflix.config.allowWidevinePlayback);
-	$.Netflix.config.preferRichWebVTTOverImageBasedSubtitle = JSON.parse($.Netflix.config.preferRichWebVTTOverImageBasedSubtitle);
-	$.Netflix.config.requestRichWebVTTAsExperimental = JSON.parse($.Netflix.config.requestRichWebVTTAsExperimental);
-	*/
-	if ($.Netflix.ctx.hasUser != "AUTO") $.Netflix.ctx.hasUser = JSON.parse($.Netflix.ctx.hasUser);
-	$.log(JSON.stringify($.Netflix.config));
-} else if (typeof $argument != "undefined") {
-	// Argument Function Supported
-	let arg = Object.fromEntries($argument.split("&").map((item) => item.split("=")));
-	$.log(JSON.stringify(arg));
-	$.Netflix.geolocation.policy = (arg.geolocation_policy == "AUTO") ? $.Netflix.geolocation.policy : arg.geolocation_policy
-	$.Netflix.geolocation.country = arg.geolocation_country;
-	/*
-	$.Netflix.config.allowWidevinePlayback = JSON.parse(arg.config_allowWidevinePlayback);
-	$.Netflix.config.airPlayDisabledEnabledOnBuild = arg.config_airPlayDisabledEnabledOnBuild;
-	$.Netflix.config.preferRichWebVTTOverImageBasedSubtitle = JSON.parse(arg.config_preferRichWebVTTOverImageBasedSubtitle);
-	$.Netflix.config.requestRichWebVTTAsExperimental = JSON.parse(arg.config_requestRichWebVTTAsExperimental);
-	$.Netflix.config.reuseAVPlayerEnabledOnBuild = arg.config_reuseAVPlayerEnabledOnBuild;
-	$.Netflix.config.nfplayerReduxEnabledOnBuild = arg.config_nfplayerReduxEnabledOnBuild;
-	*/
-	$.Netflix.ctx.region = arg.ctx_region;
-	$.Netflix.ctx.device = (arg.ctx_device == "AUTO") ? $.Netflix.ctx.device : arg.ctx_device;
-	$.Netflix.ctx.ip = arg.ctx_ip;
-	$.Netflix.ctx.hasUser = (arg.ctx_hasUser == "AUTO") ? $.Netflix.ctx.hasUser : JSON.parse(arg.ctx_hasUser);
-} else {
-	// Default Settings
-	$.Netflix = {
-		"geolocation":{
-			"policy":"ALLOW", //策略
-			"country":"" // 国家
-		},
-		"config":{
-			"allowWidevinePlayback": true, // 允许Widevine DRM回放
-			"airPlayDisabledEnabledOnBuild": "50.0.0", // 开始禁用airPlay的版本
-			"preferRichWebVTTOverImageBasedSubtitle": true, // 偏好使用RichWebVTT字幕多于图片字幕
-			"requestRichWebVTTAsExperimental": true, //试验性请求RichWebVTT字幕
-			"reuseAVPlayerEnabledOnBuild": "0", // 重新开始启用AVPlayer的版本
-			"nfplayerReduxEnabledOnBuild": "50.0.0", // 开始启用nfplayerRedux的版本
-		},
-		"ctx":{
-			"region": "", // 当前IP所属地区
-			//"monotonic": true, // 函数？
-			"device": "", // 当前使用设备
-			//"isolate_pool": true, // 隔离池？
-			//"iter": 0,
-			//"abtests":55, // AB测试
-			//"ts":1642392069933, // timestamp？
-			"ip": "",
-			"hasUser": false // 当前IP是否有用户
-		}
-	}	
+// Default Settings
+$.Netflix = {
+	"geolocation":{
+		"policy":"AUTO", //策略
+		"country":"SG" // 国家
+	},
+	"config":{
+		"allowWidevinePlayback": true, // 允许Widevine DRM回放
+		"airPlayDisabledEnabledOnBuild": "50.0.0", // 开始禁用airPlay的版本
+		"preferRichWebVTTOverImageBasedSubtitle": true, // 偏好使用RichWebVTT字幕多于图片字幕
+		"requestRichWebVTTAsExperimental": true, //试验性请求RichWebVTT字幕
+		"reuseAVPlayerEnabledOnBuild": "0", // 重新开始启用AVPlayer的版本
+		"nfplayerReduxEnabledOnBuild": "50.0.0", // 开始启用nfplayerRedux的版本
+	},
+	"ctx":{
+		"region": "", // 当前IP所属地区
+		//"monotonic": true, // 函数？
+		"device": "", // 当前使用设备
+		//"isolate_pool": true, // 隔离池？
+		//"iter": 0,
+		//"abtests":55, // AB测试
+		//"ts":1642392069933, // timestamp？
+		"ip": "",
+		"hasUser": true // 当前IP是否有用户
+	}
 };
 
 const url = $request.url;
