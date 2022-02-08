@@ -1,0 +1,104 @@
+#!name=🍟 Domains/Websites with them-Company-selves Public DNS
+#!desc=Redirect Domains/Websites to them-Company-selves Public DNS
+
+[Host]
+# > Router Admin Panel
+amplifi.lan = server:syslib // Ubiquiti Amplifi Router
+router.synology.com = server:syslib // Synology Router
+sila.razer.com = server:syslib // Razer Sila Router
+router.asus.com = server:syslib // Asus Router
+routerlogin.net = server:syslib // Netgear Router
+orbilogin.com = server:syslib // Netgear Obri Router
+www.LinksysSmartWiFi.com = server:syslib // Linksys Router
+LinksysSmartWiFi.com = server:syslib // Linksys Router
+myrouter.local = server:syslib // Linksys Router
+www.miwifi.com = server:syslib // Xiaomi Mi WiFi Router
+miwifi.com = server:syslib // Xiaomi Mi WiFi Router
+mediarouter.home = server:syslib // Huawei Router
+tplogin.cn = server:syslib // TP-Link Router
+tplinklogin.net = server:syslib // TP-Link Router
+melogin.cn = server:syslib // MERCURY Router
+falogin.cn = server:syslib // FAST Router
+# > Alphabet
+*.google = server:https://dns.google/dns-query // Google
+*.goog = server:https://dns.google/dns-query // Google sites
+*.gle = server:https://dns.google/dns-query // Google shortened URLs
+*.google.com = server:https://dns.google/dns-query // Google
+*.google.com.?? = server:https://dns.google/dns-query // Google
+*.gstatic.com = server:https://dns.google/dns-query // Google 静态资源
+*.ggpht.com = server:https://dns.google/dns-query // Google Photos
+*.googleusercontent.com = server:https://dns.google/dns-query // Google 用户上传数据
+*.googleapis.com = server:https://dns.google/dns-query // Google APIs
+*.youtube = server:https://dns.google/dns-query // Youtube sites
+*.youtube.com = server:https://dns.google/dns-query // Youtube
+*.ytimg.com = server:https://dns.google/dns-query // Youtube 图片
+*.googlevideo.com = server:https://dns.google/dns-query // Youtube Video
+# > Cloudflare
+*.cloudflare.com = server:https://cloudflare-dns.com/dns-query // Cloudflare
+*.cloudflarestream.com = server:https://cloudflare-dns.com/dns-query // Cloudflare Stream
+*.cloudflareclient.com = server:https://cloudflare-dns.com/dns-query // Cloudflare Client
+*.cloudflareinsights.com = server:https://cloudflare-dns.com/dns-query // Cloudflare Web Analytics
+*.every1dns.net = server:https://cloudflare-dns.com/dns-query // Cloudflare 1.1.1.1
+*.cloudflare-dns.com = server:https://cloudflare-dns.com/dns-query // Cloudflare DNS
+# > 阿里巴巴
+*.alibaba.com = server:https://dns.alidns.com/dns-query // 阿里巴巴
+*.taobao.com = server:https://dns.alidns.com/dns-query // 淘宝
+*.tmall.com = server:https://dns.alidns.com/dns-query // 天猫
+*.alicdn.com = server:https://dns.alidns.com/dns-query // 阿里 CDN
+*.alipay.com = server:https://dns.alidns.com/dns-query // 支付宝
+*.alipayobjects.com = server:https://dns.alidns.com/dns-query // 支付宝 静态资源
+*.aliyundrive.com = server:https://dns.alidns.com/dns-query // 阿里云盘
+*.aliyun.com = server:https://dns.alidns.com/dns-query // 阿里云
+*.aliyuncs.com = server:https://dns.alidns.com/dns-query // 阿里云API服务
+*.aliapp.com = server:https://dns.alidns.com/dns-query // 云引擎应用平台
+*.aliapp.org = server:https://dns.alidns.com/dns-query // 上云平台
+*.alibabausercontent.com = server:https://dns.alidns.com/dns-query // 阿里用户上传资料
+*.mmstat.com = server:https://dns.alidns.com/dns-query // mmstat 数据统计 广告追踪
+# > 腾讯
+*.tencent.com = server:https://doh.pub/dns-query // 腾讯
+*.qcloud.com = server:https://doh.pub/dns-query // 腾讯云
+*.myqcloud.com = server:https://doh.pub/dns-query // 腾讯开放云
+cloud.tencent.com = server:https://doh.pub/dns-query // 腾讯云
+*.tencent-cloud.net = server:https://doh.pub/dns-query // 腾讯云
+*.qq.com = server:https://doh.pub/dns-query // QQ
+*.qlogo.cn = server:https://doh.pub/dns-query // 腾讯头像
+*.qpic.cn = server:https://doh.pub/dns-query // 腾讯图片
+*.weixin.qq.com.cn = server:https://doh.pub/dns-query // 微信
+*.weixin.qq.com = server:https://doh.pub/dns-query // 微信
+*.wx.qq.com = server:https://doh.pub/dns-query // 微信
+*.weixin.com = server:https://doh.pub/dns-query // 微信
+*.weixinbridge.com = server:https://doh.pub/dns-query // 微信公众平台
+*.wechat.com = server:https://doh.pub/dns-query // WeChat
+*.servicewechat.com = server:https://doh.pub/dns-query // 微信小程序
+*.weiyun.com = server:https://doh.pub/dns-query // 微云
+*.gtimg.cn = server:https://doh.pub/dns-query // 腾讯 图片 静态资源
+*.cdn-go.cn = server:https://doh.pub/dns-query // 腾讯 静态资源 CDN
+# > 百度
+*.baidu = server:180.76.76.76 // 百度
+*.baidu.com = server:180.76.76.76 // 百度
+*.bdimg.com = server:180.76.76.76 // 百度 静态资源
+*.bdstatic.com = server:180.76.76.76 // 百度 静态资源
+*.baidupcs.com = server:180.76.76.76 // 百度网盘
+*.baidupcs.cn = server:180.76.76.76 // 百度网盘
+*.baidupcs.com.cn = server:180.76.76.76 // 百度网盘
+*.baidupcs.net = server:180.76.76.76 // 百度网盘
+*.bdydns.cn = server:180.76.76.76 // 百度云 DNS
+*.bdysite.com = server:180.76.76.76 // 百度云 域名
+*.bdysites.com = server:180.76.76.76 // 百度云 域名
+*.bcehost.com = server:180.76.76.76 // 百度云 主机
+*.bcehosts.com = server:180.76.76.76 // 百度云 主机
+*.bcebos.com = server:180.76.76.76 // 百度云 对象存储BOS
+# > 中华电信
+*.cht.com.tw  = server:https://dns.hinet.net/dns-query // 中华电信
+*.hinet.net = server:https://dns.hinet.net/dns-query // 中华电信HiNet
+*.emome.net = server:https://dns.hinet.net/dns-query // 中华电信emome
+# > iQDNS
+*.iqdns.xyz = server:https://a.passcloud.xyz/dns-query // iQDNS
+*.iqdnsio.co = server:https://a.passcloud.xyz/dns-query // iQDNS
+*.passcloud.xyz = server:https://a.passcloud.xyz/dns-queryy // iQDNS
+*.uuuglass.co = server:https://a.passcloud.xyz/dns-query // iQZone
+# > 限定
+*.gov.cn = server:1.2.4.8 // 中国政府网
+*.政务 = server:1.2.4.8 // 中国政府网
+*.tw = server:https://dns.twnic.tw/dns-query // TWNIC DNS
+*.taipei = server:https://dns.twnic.tw/dns-query // TWNIC DNS
